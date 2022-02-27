@@ -1,6 +1,6 @@
-import { AxiosInstance, AxiosResponse } from "axios";
-import apiConfig, { MainPublicApiConfig } from "./apiConfig";
-import { CustomApiClient } from "./baseApi";
+import { AxiosInstance, AxiosResponse } from 'axios';
+import apiConfig, { MainPublicApiConfig } from './apiConfig';
+import { CustomApiClient } from './baseApi';
 
 export class MainPublicApi extends CustomApiClient<MainPublicApiConfig> {
   constructor(mainHttpClient: AxiosInstance) {

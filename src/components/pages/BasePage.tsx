@@ -1,18 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useEffect, useState } from "react";
-import styled from "@emotion/styled";
-import dynamic from "next/dynamic";
-import Head from "next/head";
-import { NavButton } from "./TopBar";
+import React, { useEffect, useState } from 'react';
+import styled from '@emotion/styled';
+import dynamic from 'next/dynamic';
+import Head from 'next/head';
+import { NavButton } from './TopBar';
 
-import { backgroundSecondary } from "@/const/colors";
-import { useStore } from "@/stores/storeContext";
-import { observer } from "mobx-react-lite";
-import { useRouter } from "next/router";
-import Loader from "../base/Loader";
+import { backgroundSecondary } from '@/const/colors';
+import { useStore } from '@/stores/storeContext';
+import { observer } from 'mobx-react-lite';
+import { useRouter } from 'next/router';
+import Loader from '../base/Loader';
 
-const TopBar = dynamic(() => import("./TopBar"));
-const Footer = dynamic(() => import("./Footer"));
+const TopBar = dynamic(() => import('./TopBar'));
+const Footer = dynamic(() => import('./Footer'));
 
 type BasePageProps = {
   navButtons: ReadonlyArray<NavButton>;
@@ -96,15 +96,15 @@ const BasePage = ({
       // setTimeout(() => uiStateStore.setLoading(false), 0);
     };
 
-    router.events.on("routeChangeStart", handleStart);
-    router.events.on("routeChangeComplete", handleStop);
-    router.events.on("routeChangeError", handleStop);
+    router.events.on('routeChangeStart', handleStart);
+    router.events.on('routeChangeComplete', handleStop);
+    router.events.on('routeChangeError', handleStop);
 
     return () => {
       setTimeout(() => {
-        router.events.off("routeChangeStart", handleStart);
-        router.events.off("routeChangeComplete", handleStop);
-        router.events.off("routeChangeError", handleStop);
+        router.events.off('routeChangeStart', handleStart);
+        router.events.off('routeChangeComplete', handleStop);
+        router.events.off('routeChangeError', handleStop);
       });
     };
   }, [router, uiStateStore]);

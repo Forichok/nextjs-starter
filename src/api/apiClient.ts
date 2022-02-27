@@ -1,6 +1,6 @@
-import axios from "axios";
-import config, { Config } from "../../config";
-import { MainPublicApi } from "./mainPublicApi";
+import axios from 'axios';
+import config, { Config } from '../../config';
+import { MainPublicApi } from './mainPublicApi';
 
 const { apiGateway } = config as Config;
 

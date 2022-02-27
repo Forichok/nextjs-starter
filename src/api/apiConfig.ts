@@ -8,7 +8,7 @@ export interface MainPublicApiConfig {
 
 const apiConfig: ApiConfig = {
   mainPublic: {
-    test: "/public/test",
+    test: '/public/test',
   },
 };
 

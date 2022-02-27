@@ -1,5 +1,5 @@
-import axios, { AxiosInstance } from "axios";
-import { httpClient } from "./apiClient";
+import axios, { AxiosInstance } from 'axios';
+import { httpClient } from './apiClient';
 
 export class CustomApiClient<T> {
   client: AxiosInstance;

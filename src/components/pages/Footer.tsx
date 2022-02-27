@@ -1,6 +1,6 @@
-import styled from "@emotion/styled";
-import React from "react";
-import StyledLink from "../base/StyledLink";
+import styled from '@emotion/styled';
+import React from 'react';
+import StyledLink from '../base/StyledLink';
 
 type FooterProps = {
   className?: string;
@@ -13,16 +13,16 @@ type PolycyLink = {
 
 const PolycyLinks: ReadonlyArray<PolycyLink> = [
   {
-    title: "Политика обработки персональных данных",
-    link: "/documents/policy",
+    title: 'Политика обработки персональных данных',
+    link: '/documents/policy',
   },
   {
-    title: "Регламент по работе с клиентами",
-    link: "/documents/regulations",
+    title: 'Регламент по работе с клиентами',
+    link: '/documents/regulations',
   },
   {
-    title: "Свидетельство о регистрации",
-    link: "/documents/registry",
+    title: 'Свидетельство о регистрации',
+    link: '/documents/registry',
   },
 ];
 
@@ -129,7 +129,7 @@ const Footer = ({ className }: FooterProps) => {
 
       <RightInnerContainer>
         <MadeBy>
-          Создано в{" "}
+          Создано в{' '}
           <StyledLink href="https://aqulasoft.com">aqulasoft.com</StyledLink>
         </MadeBy>
       </RightInnerContainer>

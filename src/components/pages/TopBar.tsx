@@ -1,7 +1,7 @@
-import styled from "@emotion/styled";
-import React, { useLayoutEffect } from "react";
-import { accent, backgroundSecondary, primary } from "@/const/colors";
-import StyledLink from "../base/StyledLink";
+import styled from '@emotion/styled';
+import React, { useLayoutEffect } from 'react';
+import { accent, backgroundSecondary, primary } from '@/const/colors';
+import StyledLink from '../base/StyledLink';
 
 type TopBarProps = {
   className?: string;
@@ -118,7 +118,7 @@ const renderLink = (linkData: NavButton, onClick?: () => void) => {
   );
 };
 
-let siteOrigin = "https://chibarocket.ru/";
+let siteOrigin = 'https://chibarocket.ru/';
 
 const TopBar = ({ className, navButtons }: TopBarProps) => {
   useLayoutEffect(() => {

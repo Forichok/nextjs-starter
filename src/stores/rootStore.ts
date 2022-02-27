@@ -1,5 +1,5 @@
-import { types, unprotect } from "mobx-state-tree";
-import { initialUiStateStoreState, UiStateStore } from "./uiStateStore";
+import { types, unprotect } from 'mobx-state-tree';
+import { initialUiStateStoreState, UiStateStore } from './uiStateStore';
 
 const rootStore = types
   .model({
