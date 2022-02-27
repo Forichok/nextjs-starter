@@ -1,0 +1,86 @@
+{
+  "name": "chiba.rocket",
+  "description": "Chiba Rocket",
+  "version": "1.0.0",
+  "private": true,
+  "author": "aqulasoft.com",
+  "keywords": [
+    "nextjs",
+    "starter",
+    "typescript"
+  ],
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "type-check": "tsc",
+    "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
+    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write"
+  },
+  "dependencies": {
+    "@dropzone-ui/react": "6.5.1",
+    "@emotion/react": "11.6.0",
+    "@emotion/styled": "11.6.0",
+    "@types/react-date-range": "1.4.2",
+    "@types/react-pdf": "5.0.9",
+    "@types/react-tabs": "2.3.3",
+    "axios": "0.24.0",
+    "axios-auth-refresh": "3.2.1",
+    "mobx": "6.3.9",
+    "mobx-react": "7.2.1",
+    "mobx-state-tree": "5.1.0",
+    "moment": "2.29.1",
+    "next": "12.0.4",
+    "next-images": "1.8.2",
+    "react": "17.0.2",
+    "react-dadata": "2.13.0",
+    "react-date-range": "1.4.0",
+    "react-device-detect": "2.1.2",
+    "react-dom": "17.0.2",
+    "react-dropzone": "11.5.1",
+    "react-icons": "4.3.1",
+    "react-modal": "3.14.4",
+    "react-pdf": "5.6.0",
+    "react-phone-input-2": "2.14.0",
+    "react-select": "5.2.1",
+    "react-tabs": "3.2.3"
+  },
+  "devDependencies": {
+    "@babel/core": "7.16.0",
+    "@emotion/babel-preset-css-prop": "11.2.0",
+    "@types/node": "16.11.9",
+    "@types/react": "17.0.35",
+    "@types/react-dom": "17.0.11",
+    "@types/react-input-mask": "3.0.1",
+    "@types/react-modal": "3.13.1",
+    "@typescript-eslint/eslint-plugin": "5.4.0",
+    "@typescript-eslint/parser": "5.4.0",
+    "babel-plugin-emotion": "11.0.0",
+    "commitizen": "4.2.4",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "7.32.0",
+    "eslint-config-next": "12.0.4",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-import-resolver-typescript": "2.5.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "next-compose-plugins": "2.2.1",
+    "postcss-flexbugs-fixes": "5.0.2",
+    "postcss-preset-env": "7.0.1",
+    "prettier": "2.4.1",
+    "typescript": "4.5.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "pre-commit": "yarn lint-staged"
+  },
+  "browserslist": [
+    ">0.3%",
+    "not ie 11",
+    "not dead",
+    "not op_mini all"
+  ]
+}

@@ -1,0 +1,8 @@
+version: '3'
+services:
+  chiba_rocket_web:
+    image: chiba_rocket_web
+    container_name: chiba_rocket_web
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
