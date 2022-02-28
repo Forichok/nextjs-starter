@@ -1,5 +1,8 @@
 import dynamic from 'next/dynamic';
 import { NavButton } from '@/components/pages/TopBar';
+import { Button } from '@/components/base/StyledComponents';
+import { useState } from 'react';
+import SignDialog from '@/dialogs/SignDialog';
 
 const BasePage = dynamic(() => import('@/components/pages/BasePage'));
 
@@ -11,7 +14,18 @@ const navButtons: ReadonlyArray<NavButton> = [
 ];
 
 const Home = () => {
-  return <BasePage navButtons={navButtons}>HELLO</BasePage>;
+  const [showSignDialog, setShowSignDialog] = useState(true);
+
+  return (
+    <BasePage navButtons={navButtons}>
+      <Button onClick={() => setShowSignDialog(true)}></Button>
+      <SignDialog
+        isOpen={showSignDialog}
+        title="Подписать"
+        buttonTitle="Подписать"
+      />
+    </BasePage>
+  );
 };
 
 export default Home;

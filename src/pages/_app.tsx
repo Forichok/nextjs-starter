@@ -4,12 +4,8 @@ import { Global, css } from '@emotion/react';
 import '../styles/fonts.css';
 import { primary } from '@/const/colors';
 import '../api/apiClient'; // create api client on start
-import moment from 'moment';
-import 'moment/locale/ru';
 import { StoreProvider } from '@/stores/storeContext';
 import rootStore from '@/stores/rootStore';
-
-moment.locale('ru');
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

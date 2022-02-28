@@ -17,12 +17,12 @@ export interface ElementProps extends HTMLAttributes<HTMLElement> {
 export const Button = styled.button`
   width: fit-content;
   color: ${white};
-  height: 60px;
+  height: 45px;
   font-size: 15px;
   line-height: 1.55;
   font-weight: 700;
   border-width: 3px;
-  border-radius: 30px;
+  border-radius: 15px;
   background-color: ${accent};
   background-position: center center;
   border-color: ${accent};
@@ -76,7 +76,7 @@ export const FilledButton = styled(Button)`
   }
 `;
 
-export const RocketInputContainer = styled.div`
+export const InputContainer = styled.div`
   background-color: ${white};
   border: 2px solid ${border};
   border-radius: 30px;
@@ -85,7 +85,7 @@ export const RocketInputContainer = styled.div`
   display: flex;
 `;
 
-export const RocketTitle = styled.div`
+export const Title = styled.div`
   color: ${primary};
   font-size: 48px;
   line-height: 1.35;
@@ -98,7 +98,7 @@ export const RocketTitle = styled.div`
   }
 `;
 
-export const RocketDescription = styled.span`
+export const Description = styled.span`
   color: ${primary};
   font-size: 14px;
   line-height: 1.55;
@@ -108,7 +108,7 @@ export const RocketDescription = styled.span`
   }
 `;
 
-export const RocketSubTitle = styled.span`
+export const SubTitle = styled.span`
   text-align: left;
   font-weight: 600;
   font-size: 24px;
@@ -125,7 +125,7 @@ export const RocketSubTitle = styled.span`
   }
 `;
 
-export const RocketSubSubTitle = styled.span`
+export const SubSubTitle = styled.span`
   text-align: left;
   font-weight: 600;
   font-size: 20px;
@@ -144,14 +144,6 @@ export const RocketSubSubTitle = styled.span`
 
 export const ErrorMessage = styled.div`
   color: ${accent};
-`;
-
-export const OrderCard = styled.div`
-  position: relative;
-  display: flex;
-  border-radius: 15px;
-  box-shadow: 0px 0px 10px 3px rgb(32 34 70 / 10%);
-  padding: 50px;
 `;
 
 export const StandardLink = styled.a`
@@ -205,7 +197,7 @@ export const PageContainer = styled.div`
   }
 `;
 
-export const FieldLabel = styled(RocketDescription)`
+export const FieldLabel = styled(Description)`
   font-size: 16px !important;
   min-width: 200px;
   width: 200px;

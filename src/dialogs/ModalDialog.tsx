@@ -3,10 +3,7 @@ import styled from '@emotion/styled';
 import Modal from 'react-modal';
 import { accent, white } from '@/const/colors';
 import { IoIosCloseCircle } from 'react-icons/io';
-import {
-  BorderButton,
-  RocketSubTitle,
-} from '../components/base/StyledComponents';
+import { BorderButton, SubTitle } from '../components/base/StyledComponents';
 
 Modal.setAppElement('#__next');
 
@@ -22,9 +19,6 @@ type ModalDialogProps = {
 } & Modal.Props;
 
 const CloseButton = styled(IoIosCloseCircle)`
-  top: 10px;
-  right: 10px;
-  position: absolute;
   cursor: pointer;
   :hover {
     color: ${accent};
@@ -47,6 +41,7 @@ const DialogContent = styled.div`
   align-items: center;
   overflow: scroll;
   max-height: 70vh;
+  width: 100%;
 `;
 
 const ButtonContainer = styled.div`
@@ -55,10 +50,21 @@ const ButtonContainer = styled.div`
   align-self: self-end;
 `;
 
-const DialogTitle = styled(RocketSubTitle)``;
-
 const DialogContainer = styled.div`
   width: fit-content;
+  display: flex;
+  flex: 1;
+  width: 100%;
+`;
+
+const TopBar = styled.div`
+  margin-top: 10px;
+  padding: 0 10px;
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-end;
 `;
 
 const CustomModal = styled(Modal)`
@@ -114,13 +120,14 @@ const ModalDialog = ({
       className={className}
       isOpen={isOpen}
       onRequestClose={onRequestClose}
-      contentLabel="Example Modal"
     >
-      <DialogContainer>
-        {title ? <DialogTitle>{title}</DialogTitle> : null}
+      <TopBar>
+        {title ? <SubTitle>{title}</SubTitle> : null}
         {!hideCloseButton ? (
           <CloseButton size={40} onClick={onRequestClose} />
         ) : null}
+      </TopBar>
+      <DialogContainer>
         <DialogContent>{children}</DialogContent>
         <ButtonContainer>
           {okTitle ? (

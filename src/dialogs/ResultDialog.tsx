@@ -1,9 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import {
-  RocketDescription,
-  RocketSubTitle,
-} from '../components/base/StyledComponents';
+import { Description, SubTitle } from '../components/base/StyledComponents';
 import ModalDialog from './ModalDialog';
 import { error, success, warning } from '@/const/colors';
 
@@ -29,9 +26,9 @@ const Dialog = styled(ModalDialog)`
   flex-direction: column;
 `;
 
-const DialogTitle = styled(RocketSubTitle)``;
+const DialogTitle = styled(SubTitle)``;
 
-const DialogMessage = styled(RocketDescription)`
+const DialogMessage = styled(Description)`
   margin-top: 20px;
   padding: 20px 10px;
   border-radius: 10px;
